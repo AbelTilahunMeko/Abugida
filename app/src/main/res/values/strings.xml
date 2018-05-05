@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Abugida</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="password">Password</string>
+    <string name="name">Username</string>
+    <string name="sign_up">Sign up</string>
+    <string name="new_user">New user?</string>
+    <string name="person_info">Personal Information</string>
+    <string name="account_setup">Account Information</string>
+    <string name="f_name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="GenderMale">Male</string>
+    <string name="GenderFemale">Female</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="user_name">Username</string>
+    <string name="email">Email Address</string>
+    <string name="con_pass">Confirm Password</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phoneNum">Phone Number</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="enter_boarding">Enter Boarding</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="date">Date</string>
+    <string name="homeFragementTitle">Travel Search</string>
+    <string name="bookedTravelResult">Booked Travels</string>
+    <string name="pendingTicketsTititle">Peeding Tickets</string>
+    <string name="profileTitle">Profile</string>
+    <string name="settingTitle">Settings</string>
+
+
+</resources>

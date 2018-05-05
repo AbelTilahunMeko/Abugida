@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".View.Tabs.HomeFragmenet"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical">
+    <LinearLayout
+        android:id="@+id/password_login_linear"
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:background="@drawable/white_square_background"
+        android:paddingEnd="8dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:paddingBottom="8dp"
+            android:textSize="21sp"
+            android:drawableBottom="@drawable/ic_radio_button_unchecked_black_24dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp">
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/staringPoint"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_boarding"
+                android:paddingBottom="12dp" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/white_square_background"
+        android:paddingEnd="8dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/to"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:paddingBottom="8dp"
+            android:textSize="21sp"
+            android:drawableBottom="@drawable/ic_radio_button_unchecked_black_24dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="28dp">
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/destinationPoint"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_destination"
+                android:paddingBottom="12dp" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/white_square_background"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:paddingLeft="31dp"
+            android:paddingStart="31dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="8dp"
+            android:textSize="21sp"
+            android:drawableBottom="@drawable/calander2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21"
+            android:textSize="21sp"
+            android:paddingLeft="21dp"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="September"
+            android:textSize="21sp"
+            android:paddingLeft="21dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textSize="21sp"
+            android:paddingLeft="31dp"
+            android:layout_marginTop="30dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/serachButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="Search Bus"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"/>
+</LinearLayout>
