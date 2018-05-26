@@ -32,6 +32,8 @@
     <string name="pendingTicketsTititle">Peeding Tickets</string>
     <string name="profileTitle">Profile</string>
     <string name="settingTitle">Settings</string>
+    <string name="book_seats">Book Seats</string>
+    <string name="messageToConfirm">*Please make a deposit and enter TIN number to finalize reservation</string>
 
 
 </resources>

@@ -1,12 +1,17 @@
 package com.aaitabem.abugida.abugida.View;
 
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import  com.aaitabem.abugida.abugida.Controller.MyAdapter;
 
 import com.aaitabem.abugida.abugida.R;
@@ -63,6 +68,9 @@ public class SearchResult extends Fragment  {
     };
 
     ListView lv;
+
+    //Accessing the fragments
+    SearchSelected searchSelected;
     int[] images = {R.drawable.imgres,
             R.drawable.imgres, R.drawable.imgres,
             R.drawable.imgres,R.drawable.imgres,
@@ -79,11 +87,27 @@ public class SearchResult extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search_result, container, false);
+
+        //Initialize the fragment
+        searchSelected = new SearchSelected();
+
+
         // Inflate the layout for this fragment
         lv = view.findViewById(R.id.listItems);
-        MyAdapter adapter = new MyAdapter(this.getContext(), title, busTime, images,numberOfSeats, busTicketPrice);
+        MyAdapter adapter = new MyAdapter(this.getActivity(), title, busTime, images,numberOfSeats, busTicketPrice);
         lv.setAdapter(adapter);
 
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(this, "The item selected"+ position ,Toast.LENGTH_LONG).show();
+                if(position == 0){
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.homeFrameLayout, searchSelected);
+                    fragmentTransaction.commit();
+                }
+            }
+        });
         return view;
     }
 

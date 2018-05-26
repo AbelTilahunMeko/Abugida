@@ -154,7 +154,7 @@ public class PersonInfoFragment extends Fragment implements View.OnClickListener
         System.out.println("The selected year:- " + view.getYear() + "/" + view.getMonth() + "/" + view.getDayOfMonth());
         String dateChoosen = view.getDayOfMonth() + "/" + view.getMonth() + "/" + view.getYear();
         dateofBirth_textView.setText(dateChoosen);
-        dateofBirth_textView.setTextColor(getResources().getColor(R.color.black, null));
+        dateofBirth_textView.setTextColor(getResources().getColor(R.color.black));
         this.dateOfBirthString = dateChoosen;
 //        send.setEnabled(true);
 //        send.setBackgroundColor(getResources().getColor(R.color.buttonColor,null));
@@ -168,7 +168,7 @@ public class PersonInfoFragment extends Fragment implements View.OnClickListener
 //            send.setBackgroundColor(getResources().getColor(R.color.buttonColor, null));
 //        }
         if (v == dateofBirth_textView) {
-            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), this, 2000, 2, 2);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this.getActivity(), this, 2000, 2, 2);
             datePickerDialog.show();
 
         } else if (send == v) {
@@ -242,7 +242,7 @@ public class PersonInfoFragment extends Fragment implements View.OnClickListener
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         if (TextUtils.isEmpty(genderSelected) || TextUtils.isEmpty(dateOfBirthString)) {
-            Toast.makeText(this.getContext(), this.genderSelected, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this.getContext(), this.genderSelected, Toast.LENGTH_SHORT).show();
             send.setEnabled(false);
             send.setBackground(getResources().getDrawable(R.drawable.buttonblack, null));
         } else {
@@ -264,7 +264,7 @@ public class PersonInfoFragment extends Fragment implements View.OnClickListener
             send.setBackground(getResources().getDrawable(R.drawable.buttonblack, null));
         } else {
             if (TextUtils.isEmpty(genderSelected) || TextUtils.isEmpty(dateOfBirthString)) {
-                Toast.makeText(this.getContext(), this.genderSelected, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this.getContext(), this.genderSelected, Toast.LENGTH_SHORT).show();
                 send.setEnabled(false);
                 send.setBackground(getResources().getDrawable(R.drawable.buttonblack, null));
             } else {

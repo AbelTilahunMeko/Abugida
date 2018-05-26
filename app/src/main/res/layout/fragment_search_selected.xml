@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="450dp"
+    android:layout_height="400dp"
+    android:layout_below="@+id/busName"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".View.SearchSelected"
+    android:layout_marginTop="21dp">
+
+    <RelativeLayout
+        android:id="@+id/relatID"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/white_square_background"
+
+        >
+        <TextView
+            android:id="@+id/busName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Selam Bus"
+            android:textColor="@color/buttonColor"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/borderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/busName1"
+            android:background="@color/buttonColor" />
+
+        <LinearLayout
+            android:id="@+id/firstLinear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/borderline"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/secondId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Station"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/bookingStationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstId"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="A.A"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/borderline"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/firstLinear"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/thirdId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Destination Station"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/destinationStationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+
+        <!--The second Line-->
+        <LinearLayout
+            android:id="@+id/thirdLinear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstLinear"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fourthId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Passenger"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/passangerNamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstId"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="Abel Tilahun"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fifthId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/thirdLinear"
+            android:layout_marginEnd="123dp"
+            android:text="For"
+
+            android:textSize="21sp" />
+
+        <LinearLayout
+            android:id="@+id/fourthLinear"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thirdLinear"
+
+            android:layout_alignEnd="@+id/secondLinear"
+            android:orientation="horizontal">
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/NUmberOfPasssanger"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:text="A.A"-->
+            <!--android:textSize="21sp" />-->
+            <!--<Spinner-->
+            <!--android:id="@+id/spinner1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:background="@android:drawable/btn_dropdown"-->
+            <!--android:spinnerMode="dropdown"/>-->
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="31dp"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dropdown" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bookTicketButton"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="114dp"
+        android:background="@drawable/button"
+        android:text="@string/book_seats"
+        android:textColor="@android:color/white" />
+
+
+
+</RelativeLayout>

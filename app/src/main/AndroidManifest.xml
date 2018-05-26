@@ -24,7 +24,6 @@
         <activity
             android:name=".View.Signup"
             android:theme="@style/NoActionBar.Abugida" />
-
         <activity
             android:name=".View.Home"
             android:theme="@style/NoActionBar.Abugida" />
