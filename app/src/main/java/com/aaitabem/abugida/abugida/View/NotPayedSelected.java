@@ -1,9 +1,8 @@
 package com.aaitabem.abugida.abugida.View;
 
-
 import android.app.AlertDialog;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +10,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.aaitabem.abugida.abugida.MainActivity;
 import com.aaitabem.abugida.abugida.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Created by ${Abel_Tilahun} on ${4/9/2018}.
  */
-public class SearchSelected extends Fragment
-        implements
+public class NotPayedSelected extends Fragment implements
         AdapterView.OnItemSelectedListener,
         View.OnClickListener
 {
@@ -33,11 +29,11 @@ public class SearchSelected extends Fragment
     Button btnConfirm;
 
     //Book button
-    Button bookBusTicketBtn;
+    Button submitTinBtn;
 
     private static final String[] paths = {"1", "2", "3"};
 
-    public SearchSelected() {
+    public NotPayedSelected() {
         // Required empty public constructor
     }
 
@@ -46,11 +42,11 @@ public class SearchSelected extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_search_selected, container, false);
+        View view = inflater.inflate(R.layout.notpayedselectedui, container, false);
         spinner = view.findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item, paths);
 
-        bookBusTicketBtn = view.findViewById(R.id.bookTicketButton);
+        submitTinBtn = view.findViewById(R.id.submitTinNumber);
 
         //TODO this is where to fix it
 //        btnConfirm = view.findViewById(R.id.confimButtonAlertD);
@@ -59,14 +55,14 @@ public class SearchSelected extends Fragment
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        bookBusTicketBtn.setOnClickListener(this);
+        submitTinBtn.setOnClickListener(this);
 
         return view;
     }
 
     @Override
     public void onClick(View v){
-        if(bookBusTicketBtn == v){
+        if(submitTinBtn == v){
             //Create an alert dialog fragment.
             showConfirmingButton();
         }
@@ -79,7 +75,7 @@ public class SearchSelected extends Fragment
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         //This is the custom alertDialog that will be showed for confrim ticket
-        builder.setView(R.layout.confimbookinglayout);
+        builder.setView(R.layout.confirmsubmitui);
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
@@ -112,5 +108,4 @@ public class SearchSelected extends Fragment
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
 }

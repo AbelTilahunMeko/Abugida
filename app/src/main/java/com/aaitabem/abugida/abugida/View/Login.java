@@ -18,6 +18,9 @@ import es.dmoral.toasty.Toasty;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
+    //TODO work validation on the login page before sending to the controller
+
+
     TextView signup;
     Button signin;
 
@@ -90,9 +93,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
     @Override
     public void onBackPressed(){
-        Intent mainActivity = new Intent(this, MainActivity.class);
+//        Intent mainActivity = new Intent(this, MainActivity.class);
         finish();
-        startActivity(mainActivity);
+//        startActivity(mainActivity);
     }
 
     @Override

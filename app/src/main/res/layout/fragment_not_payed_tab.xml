@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.Tabs.NotPayedTab">
+    tools:context=".View.Tabs.NotPayedTab"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:layout_weight="10"
+        android:id="@+id/notpayedListItmes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Not Payed Tab" />
+        android:layout_height="0dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="9dp"
+        />
 
-</FrameLayout>
+
+</LinearLayout>

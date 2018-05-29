@@ -16,7 +16,9 @@ import com.aaitabem.abugida.abugida.R;
 import com.aaitabem.abugida.abugida.View.SearchResult;
 
 import es.dmoral.toasty.Toasty;
-
+//TODO Set clickListener to data
+//TODO add validation to the serahc inputs by the user
+//TODO add on backPressed to handle the appropirate fragmenet to be displayed
 public class HomeFragmenet extends Fragment implements View.OnClickListener {
 
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/busName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="21dp"
+        android:text="Payement Validate"
+        android:textColor="@color/buttonColor"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/borderline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/buttonColor"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Booking has been placed."
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:textSize="21sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have a safe trip"
+        android:layout_gravity="center"
+        android:textSize="21sp"/>
+    <Button
+        android:id="@+id/submitTinNumber"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/button"
+        android:layout_gravity="center"
+        android:text="Ok"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

@@ -34,6 +34,8 @@
     <string name="settingTitle">Settings</string>
     <string name="book_seats">Book Seats</string>
     <string name="messageToConfirm">*Please make a deposit and enter TIN number to finalize reservation</string>
+    <string name="submit">Submit</string>
+    <string name="tin_number">Tin Number</string>
 
 
 </resources>
