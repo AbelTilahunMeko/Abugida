@@ -118,7 +118,7 @@ public class FinalInformation extends Fragment implements View.OnClickListener{
             fragmentTransaction.commit();
 
         }else if( signUp == view){
-            Toast.makeText(this.getContext(), "Finish of the view", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Finish of the view", Toast.LENGTH_SHORT).show();
         }
     }
 }
