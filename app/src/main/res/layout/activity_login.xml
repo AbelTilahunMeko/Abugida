@@ -35,7 +35,11 @@
                 android:layout_marginStart="30dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/incorrect"
+                    android:layout_marginBottom="10dp"/>
                 <LinearLayout
                     android:id="@+id/username_feild"
                     android:layout_width="match_parent"
@@ -57,10 +61,12 @@
 
                         <EditText
                             android:id="@+id/username_login"
+                            android:inputType="number"
                             android:layout_width="250dp"
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
                             android:hint="@string/name"
+                            android:textColor="@android:color/black"
                             android:paddingBottom="12dp" />
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
@@ -93,6 +99,8 @@
                             android:layout_height="match_parent"
                             android:background="@android:color/transparent"
                             android:hint="@string/password"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
                             android:paddingBottom="12dp" />
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
@@ -119,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/new_user"
                     android:textSize="18sp"
+                    android:textColor="@android:color/black"
                     />
 
                 <TextView
@@ -129,6 +138,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sign_up"
                     android:textSize="21sp"
+                    android:textColor="@android:color/black"
                     />
             </LinearLayout>
 

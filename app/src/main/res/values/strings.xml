@@ -29,7 +29,7 @@
     <string name="date">Date</string>
     <string name="homeFragementTitle">Travel Search</string>
     <string name="bookedTravelResult">Booked Travels</string>
-    <string name="pendingTicketsTititle">Peeding Tickets</string>
+    <string name="pendingTicketsTititle">Pending Tickets</string>
     <string name="profileTitle">Profile</string>
     <string name="settingTitle">Settings</string>
     <string name="book_seats">Book Seats</string>

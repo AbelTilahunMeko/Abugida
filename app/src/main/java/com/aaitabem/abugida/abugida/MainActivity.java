@@ -1,6 +1,9 @@
 package com.aaitabem.abugida.abugida;
 
+import android.Manifest;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +31,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeView = findViewById(R.id.change);
 
         changeView.setOnClickListener(this);
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.READ_SMS,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.INTERNET,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+            }, 123);
+        }
 
 //        String x = String.valueOf(date.getSeconds());
 //        Toast.makeText(this, x,Toast.LENGTH_LONG).show();

@@ -12,6 +12,7 @@ import com.aaitabem.abugida.abugida.MainActivity;
 import com.aaitabem.abugida.abugida.R;
 
 public class Signup extends AppCompatActivity{
+    //TODO Make sure to chage the icons on the account information display
     public Signup(){
 
     }

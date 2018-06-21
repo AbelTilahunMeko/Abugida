@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="21dp"
-            android:text="Selam Bus"
+
             android:textColor="@color/buttonColor"
             android:textSize="28sp" />
 
@@ -63,7 +63,7 @@
                 android:layout_below="@+id/firstId"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="A.A"
+
                 android:textColor="@color/black"
                 android:textSize="21sp" />
 
@@ -94,7 +94,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="Home"
                 android:textColor="@color/black"
                 android:textSize="21sp" />
 
@@ -126,7 +125,7 @@
                 android:layout_below="@+id/firstId"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="4dp"
-                android:text="Abel Tilahun"
+
                 android:textColor="@color/black"
                 android:textSize="21sp" />
 
@@ -200,7 +199,4 @@
         android:background="@drawable/button"
         android:text="@string/book_seats"
         android:textColor="@android:color/white" />
-
-
-
 </RelativeLayout>

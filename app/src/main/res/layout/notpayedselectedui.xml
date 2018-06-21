@@ -188,13 +188,14 @@
             >
 
             <EditText
-                android:id="@+id/username_login"
+                android:id="@+id/tin_num"
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:hint="Tin Number"
                 android:lines="1"
-                android:paddingBottom="12dp" />
+                android:paddingBottom="12dp"
+                android:inputType="number"/>
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
