@@ -29,11 +29,13 @@
     <string name="date">Date</string>
     <string name="homeFragementTitle">Travel Search</string>
     <string name="bookedTravelResult">Booked Travels</string>
-    <string name="pendingTicketsTititle">Peeding Tickets</string>
+    <string name="pendingTicketsTititle">Pending Tickets</string>
     <string name="profileTitle">Profile</string>
     <string name="settingTitle">Settings</string>
     <string name="book_seats">Book Seats</string>
     <string name="messageToConfirm">*Please make a deposit and enter TIN number to finalize reservation</string>
+    <string name="submit">Submit</string>
+    <string name="tin_number">Tin Number</string>
 
 
 </resources>

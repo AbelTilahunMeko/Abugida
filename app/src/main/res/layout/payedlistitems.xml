@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/whiteback"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:id="@+id/idPic"
+            android:background="@android:color/white"
+            android:src="@drawable/imgres"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTitle"
+            android:text="Bus Name"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/idPic"
+            />
+        <TextView
+            android:layout_marginStart="14dp"
+            android:id="@+id/id_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_below="@+id/idTitle"
+            android:layout_toEndOf="@+id/idPic"
+            />
+
+        <TextView
+            android:id="@+id/pirceOfticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="60dp"
+            android:text="status"
+            android:textColor="@color/buttonColor"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/seatsLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/pirceOfticket"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/seatsLeft"
+            android:layout_marginLeft="4dp"
+            android:text="Seats"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

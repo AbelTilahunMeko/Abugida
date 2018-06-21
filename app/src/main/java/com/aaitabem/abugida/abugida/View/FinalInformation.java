@@ -3,6 +3,7 @@ package com.aaitabem.abugida.abugida.View;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aaitabem.abugida.abugida.MainActivity;
+import com.aaitabem.abugida.abugida.Model.api.User;
+import com.aaitabem.abugida.abugida.Model.service.UserClient;
 import com.aaitabem.abugida.abugida.R;
+import com.google.gson.Gson;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by ${Abel_Tilahun} on ${4/9/2018}.
@@ -19,9 +30,13 @@ import com.aaitabem.abugida.abugida.R;
 
 @SuppressLint("ValidFragment")
 public class FinalInformation extends Fragment implements View.OnClickListener{
+   // public static final String API_BASE_URI = "http://10.5.50.58:3000/userAccount/";
+//   public static final String API_BASE_URI_SIGN_UP = "http://10.5.50.21:3000/api/bsu/";
+   public static final String API_BASE_URI_SIGN_UP = "http://192.168.43.78:3000/api/bsu/";
+
     String firstName;
     String lastName;
-    String phoneNumber;
+    String phone;
     String dateOfBirth;
     String email;
     String gender;
@@ -61,7 +76,7 @@ public class FinalInformation extends Fragment implements View.OnClickListener{
         this.dateOfBirth = dateOfBirth;
         this.email = email;
         this.gender = gender;
-        this.phoneNumber = phoneNumber;
+        this.phone = phoneNumber;
         this.conPassword = conPassword;
         this.password = password;
     };
@@ -80,7 +95,7 @@ public class FinalInformation extends Fragment implements View.OnClickListener{
         firstName_viewr.setText(firstName);
         lastName_viewr.setText(lastName);
         dateOfBirth_viewr.setText(dateOfBirth);
-        phoneNumber_viewr.setText(phoneNumber);
+        phoneNumber_viewr.setText(phone);
         email_viewr.setText(email);
         gender_viewr.setText(gender);
 
@@ -96,7 +111,7 @@ public class FinalInformation extends Fragment implements View.OnClickListener{
                 email,
                 password,
                 conPassword,
-                phoneNumber
+                phone
         );
 
         prev.setOnClickListener(this);
@@ -118,7 +133,63 @@ public class FinalInformation extends Fragment implements View.OnClickListener{
             fragmentTransaction.commit();
 
         }else if( signUp == view){
-            Toast.makeText(this.getContext(), "Finish of the view", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(), "Finish of the view", Toast.LENGTH_SHORT).show();
+            User user = new User(
+                    firstName,
+                    lastName,
+                    dateOfBirth,
+                    gender,
+                    phone,
+                    email,
+                    password
+            );
+            sendNetwrokReques(user);
+
+
         }
+
     }
+
+
+    //This section of code will be moved to the controller class after completion
+
+    public void sendNetwrokReques(User user){
+        //Use an instance of the retrofit class
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(API_BASE_URI_SIGN_UP)
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        UserClient userClient = retrofit.create(UserClient.class);
+
+        Call<User> call = userClient.createAccount(user);
+
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                Toast.makeText(getActivity(), "Account Created", Toast.LENGTH_LONG ).show();
+
+                if(response.isSuccessful()){
+                    //Make sure to add the below code here when ever u are creating a new user
+                    System.out.println("SIgn Up Response " + new Gson().toJson(response.body()));
+                    Intent singinIntent = new Intent(getActivity(), Login.class);
+                    startActivity(singinIntent);
+                }else{
+                    System.out.println("SIGN Up ERROR " + new Gson().toJson(response.body()));
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(getActivity(), "Network Failure", Toast.LENGTH_LONG).show();
+                System.out.println("What is tit##########################   ");
+                System.out.println(t);
+            }
+        });
+    }
+
 }
+

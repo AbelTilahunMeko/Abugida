@@ -133,6 +133,7 @@
             />
     </LinearLayout>
     <Button
+        android:id="@+id/confimButtonAlertD"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
