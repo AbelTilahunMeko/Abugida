@@ -1,0 +1,13 @@
+{
+  "userAccount": [
+    {
+      "id": 1,
+      "firstName": "Abel",
+      "lastName": "Tilahun",
+      "email": "at351291@gmail.com",
+      "password": "1234qwer",
+      "age": 21,
+      "gender": "female"
+    }
+  ]
+}
